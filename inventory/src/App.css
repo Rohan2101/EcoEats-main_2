@@ -1,0 +1,155 @@
+/* Updated App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  background-image: url('./images/fridge.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200% 200%; 
+}
+
+.body.content{
+  z-index: 2;
+  color: red;
+}
+
+.App {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar {
+  /* background-color:rgba(0, 0, 128, 0.5); */
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  /* Add shadow for depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar button {
+  background-color: transparent; /* Remove black highlight */
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px; 
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background-color: #978989;
+}
+
+header {
+  font-size: 24px;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+
+  /* font-size: 48px; 
+  color: #2c3e50; 
+  font-weight: bold;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1); */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+.status-not-expired {
+  color: green;
+}
+
+.status-expired {
+  color: red;
+}
+
+.actions {
+  text-align: center;
+}
+
+.popup {
+  position: fixed; /* Change to fixed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9); /* Change to rgba for transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 10px; /* Add spacing between lines */
+  font-weight: bold;
+}
+
+.popup input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px; /* Add spacing between input boxes */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Add more styling as needed */
+/*****************************************************************************/
+
+/* New styles for animations */
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  transition: background-color 0.3s ease;
+  background-color: #3498db; /* A cool blue shade when hovered */
+}
+
+.popup {
+  /* ... other styles ... */
+  /* Add a transition for when it pops up */
+  transition: transform 0.3s ease-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup.open {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.backgroundOverlay {
+  opacity: 60%;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
